@@ -1,0 +1,3 @@
+/home/andrei/Projects/GameFr/build/CMakeFiles/GameFr.dir
+/home/andrei/Projects/GameFr/build/CMakeFiles/edit_cache.dir
+/home/andrei/Projects/GameFr/build/CMakeFiles/rebuild_cache.dir

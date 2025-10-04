@@ -1,0 +1,14 @@
+[
+{
+  "directory": "/home/andrei/Projects/GameFr/build",
+  "command": "/usr/bin/c++  -I/home/andrei/Projects/GameFr/include -std=gnu++20 -o CMakeFiles/GameFr.dir/src/hey.cpp.o -c /home/andrei/Projects/GameFr/src/hey.cpp",
+  "file": "/home/andrei/Projects/GameFr/src/hey.cpp",
+  "output": "CMakeFiles/GameFr.dir/src/hey.cpp.o"
+},
+{
+  "directory": "/home/andrei/Projects/GameFr/build",
+  "command": "/usr/bin/c++  -I/home/andrei/Projects/GameFr/include -std=gnu++20 -o CMakeFiles/GameFr.dir/src/main.cpp.o -c /home/andrei/Projects/GameFr/src/main.cpp",
+  "file": "/home/andrei/Projects/GameFr/src/main.cpp",
+  "output": "CMakeFiles/GameFr.dir/src/main.cpp.o"
+}
+]

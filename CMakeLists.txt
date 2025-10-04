@@ -15,7 +15,7 @@ file(GLOB GAMEFR_INCLUDE
    ${CMAKE_SOURCE_DIR}/include/*.hpp
 )
 
-add_executable(GameFr ${GAMEFR_SOURCES})
+add_library(GameFr ${GAMEFR_SOURCES})
 
 target_include_directories(GameFr PUBLIC
     ${CMAKE_SOURCE_DIR}/include

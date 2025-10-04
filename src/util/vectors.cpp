@@ -1,6 +1,16 @@
 #include "util/vectors.hpp"
 #include <cmath>
 
+Vector2::Vector2(){
+	X = 0;
+	Y = 0;
+}
+
+Vector2::Vector2(const float& x, const float& y){
+	X = x;
+	Y = y;
+}
+
 Vector2 Vector2::GetDiference(const Vector2 &first, const Vector2 &second){
 	Vector2 result;
 	result.X = first.X - second.X;

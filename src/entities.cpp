@@ -31,6 +31,8 @@ bool Entity2D::CollidingRect(const Entity2D& other) const {
 }
 
 bool Entity2D::CollidingCircle(const Entity2D& other, const uint32_t desiredDistance) const{
-	if (Vector2::GetDistance(position, other.position) < (float)desiredDistance) return true;
+	Vector2 pos(position.X + (float)width / 2, position.Y + (float)height / 2);
+	Vector2 otherPos(other.position.X + (float)other.width / 2, other.position.Y + (float)other.height / 2);
+	if (Vector2::GetDistance(pos, other.position) < (float)desiredDistance) return true;
 	else return false;
 }

@@ -1,4 +1,5 @@
 #include "entities.hpp"
+#include <cstdint>
 
 void Entity2D::Push(const Vector2& direction, const float& speed){
 	position.X += direction.X * speed;
@@ -29,5 +30,7 @@ bool Entity2D::CollidingRect(const Entity2D& other) const {
     return true;
 }
 
-
-
+bool Entity2D::CollidingCircle(const Entity2D& other, const uint32_t desiredDistance) const{
+	if (Vector2::GetDistance(position, other.position) < (float)desiredDistance) return true;
+	else return false;
+}

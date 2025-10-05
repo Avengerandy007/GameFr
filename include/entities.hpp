@@ -6,6 +6,7 @@ public:
 	uint32_t width, height;
 	void Push(const Vector2& direction, const float& speed);
 	bool CollidingRect(const Entity2D& other) const;
+	bool CollidingCircle(const Entity2D& other, const uint32_t desiredDistance) const;
 	virtual void Update() = 0;
 
 protected:

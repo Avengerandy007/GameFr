@@ -1,3 +1,4 @@
+#pragma once
 #include "util/vectors.hpp"
 #include <inttypes.h>
 class Entity2D{
@@ -11,7 +12,7 @@ public:
 
 protected:
 	/*
-	 *	Make sure to put this in an update function so that the renderer knows where to render the object
+	 *	Make sure to put this in an update function so that the renderer knows where to draw the object
 	 *	Call it with the arguments of the rect that your rendering library is using
 	 *	And the template argument that represents the type that the rect uses
 	 *	Ex: 

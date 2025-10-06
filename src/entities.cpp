@@ -18,15 +18,12 @@ bool Entity2D::CollidingRect(const Entity2D& other) const {
     int topB    = other.position.Y;
     int bottomB = other.position.Y + other.height;
 
-    // If one rectangle is to the left of the other -> no collision
     if (rightA < leftB)  return false;
     if (rightB < leftA)  return false;
 
-    // If one rectangle is above the other -> no collision
     if (bottomA < topB)   return false;
     if (bottomB < topA)   return false;
 
-    // Otherwise there is an intersection
     return true;
 }
 

@@ -3,6 +3,7 @@
 #include <cstdint>
 #include "entities.hpp"
 class Camera2D{
+protected:
 	enum struct Modes{
 		DONT_FOLLOW,
 		FOLLOW,

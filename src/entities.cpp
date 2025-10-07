@@ -1,4 +1,5 @@
 #include "entities.hpp"
+#include "camera.hpp"
 #include <cstdint>
 
 void Entity2D::Push(const Vector2& direction, const float& speed){
@@ -32,4 +33,10 @@ bool Entity2D::CollidingCircle(const Entity2D& other, const uint32_t desiredDist
 	Vector2 otherPos(other.position.X + (float)other.width / 2, other.position.Y + (float)other.height / 2);
 	if (Vector2::GetDistance(pos, other.position) < (float)desiredDistance) return true;
 	else return false;
+}
+
+bool Entity2D::IsOnScreen(const Camera2D& camera){
+	if (position.X + width <= camera.position.X || position.X >= camera.position.X + camera.resolutionX) return false;
+	if (position.Y + height <= camera.position.Y || position.Y >= camera.position.Y + camera.resolutionY) return false;
+	return true;
 }

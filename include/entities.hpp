@@ -1,6 +1,7 @@
 #pragma once
 #include "util/vectors.hpp"
 #include <inttypes.h>
+class Camera2D;
 class Entity2D{
 public:
 	Vector2 position;
@@ -26,6 +27,8 @@ protected:
 		W = width;
 		H = height;
 	}
+	bool onScreen;
+	bool IsOnScreen(const Camera2D& camera);
 };
 
 class Entity3D{

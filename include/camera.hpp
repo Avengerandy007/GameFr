@@ -1,8 +1,7 @@
 #pragma once
-#include "util/vectors.hpp"
-#include "entities.hpp"
 #include <memory>
 #include <cstdint>
+#include "entities.hpp"
 class Camera2D{
 	enum struct Modes{
 		DONT_FOLLOW,

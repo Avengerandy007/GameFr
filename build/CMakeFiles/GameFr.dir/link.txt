@@ -1,1 +1,2 @@
-/usr/bin/c++ -Wl,--dependency-file=CMakeFiles/GameFr.dir/link.d CMakeFiles/GameFr.dir/src/hey.cpp.o CMakeFiles/GameFr.dir/src/main.cpp.o -o GameFr
+/usr/bin/ar qc libGameFr.a CMakeFiles/GameFr.dir/src/camera.cpp.o CMakeFiles/GameFr.dir/src/entities.cpp.o
+/usr/bin/ranlib libGameFr.a

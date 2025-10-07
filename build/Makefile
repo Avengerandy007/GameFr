@@ -136,53 +136,53 @@ GameFr/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameFr.dir/build.make CMakeFiles/GameFr.dir/build
 .PHONY : GameFr/fast
 
-src/hey.o: src/hey.cpp.o
-.PHONY : src/hey.o
+src/camera.o: src/camera.cpp.o
+.PHONY : src/camera.o
 
 # target to build an object file
-src/hey.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameFr.dir/build.make CMakeFiles/GameFr.dir/src/hey.cpp.o
-.PHONY : src/hey.cpp.o
+src/camera.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameFr.dir/build.make CMakeFiles/GameFr.dir/src/camera.cpp.o
+.PHONY : src/camera.cpp.o
 
-src/hey.i: src/hey.cpp.i
-.PHONY : src/hey.i
+src/camera.i: src/camera.cpp.i
+.PHONY : src/camera.i
 
 # target to preprocess a source file
-src/hey.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameFr.dir/build.make CMakeFiles/GameFr.dir/src/hey.cpp.i
-.PHONY : src/hey.cpp.i
+src/camera.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameFr.dir/build.make CMakeFiles/GameFr.dir/src/camera.cpp.i
+.PHONY : src/camera.cpp.i
 
-src/hey.s: src/hey.cpp.s
-.PHONY : src/hey.s
+src/camera.s: src/camera.cpp.s
+.PHONY : src/camera.s
 
 # target to generate assembly for a file
-src/hey.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameFr.dir/build.make CMakeFiles/GameFr.dir/src/hey.cpp.s
-.PHONY : src/hey.cpp.s
+src/camera.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameFr.dir/build.make CMakeFiles/GameFr.dir/src/camera.cpp.s
+.PHONY : src/camera.cpp.s
 
-src/main.o: src/main.cpp.o
-.PHONY : src/main.o
+src/entities.o: src/entities.cpp.o
+.PHONY : src/entities.o
 
 # target to build an object file
-src/main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameFr.dir/build.make CMakeFiles/GameFr.dir/src/main.cpp.o
-.PHONY : src/main.cpp.o
+src/entities.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameFr.dir/build.make CMakeFiles/GameFr.dir/src/entities.cpp.o
+.PHONY : src/entities.cpp.o
 
-src/main.i: src/main.cpp.i
-.PHONY : src/main.i
+src/entities.i: src/entities.cpp.i
+.PHONY : src/entities.i
 
 # target to preprocess a source file
-src/main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameFr.dir/build.make CMakeFiles/GameFr.dir/src/main.cpp.i
-.PHONY : src/main.cpp.i
+src/entities.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameFr.dir/build.make CMakeFiles/GameFr.dir/src/entities.cpp.i
+.PHONY : src/entities.cpp.i
 
-src/main.s: src/main.cpp.s
-.PHONY : src/main.s
+src/entities.s: src/entities.cpp.s
+.PHONY : src/entities.s
 
 # target to generate assembly for a file
-src/main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameFr.dir/build.make CMakeFiles/GameFr.dir/src/main.cpp.s
-.PHONY : src/main.cpp.s
+src/entities.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameFr.dir/build.make CMakeFiles/GameFr.dir/src/entities.cpp.s
+.PHONY : src/entities.cpp.s
 
 # Help Target
 help:
@@ -194,12 +194,12 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... GameFr"
-	@echo "... src/hey.o"
-	@echo "... src/hey.i"
-	@echo "... src/hey.s"
-	@echo "... src/main.o"
-	@echo "... src/main.i"
-	@echo "... src/main.s"
+	@echo "... src/camera.o"
+	@echo "... src/camera.i"
+	@echo "... src/camera.s"
+	@echo "... src/entities.o"
+	@echo "... src/entities.i"
+	@echo "... src/entities.s"
 .PHONY : help
 
 

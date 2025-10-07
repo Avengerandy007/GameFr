@@ -72,52 +72,52 @@ include CMakeFiles/GameFr.dir/flags.make
 CMakeFiles/GameFr.dir/codegen:
 .PHONY : CMakeFiles/GameFr.dir/codegen
 
-CMakeFiles/GameFr.dir/src/hey.cpp.o: CMakeFiles/GameFr.dir/flags.make
-CMakeFiles/GameFr.dir/src/hey.cpp.o: /home/andrei/Projects/GameFr/src/hey.cpp
-CMakeFiles/GameFr.dir/src/hey.cpp.o: CMakeFiles/GameFr.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/andrei/Projects/GameFr/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/GameFr.dir/src/hey.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GameFr.dir/src/hey.cpp.o -MF CMakeFiles/GameFr.dir/src/hey.cpp.o.d -o CMakeFiles/GameFr.dir/src/hey.cpp.o -c /home/andrei/Projects/GameFr/src/hey.cpp
+CMakeFiles/GameFr.dir/src/camera.cpp.o: CMakeFiles/GameFr.dir/flags.make
+CMakeFiles/GameFr.dir/src/camera.cpp.o: /home/andrei/Projects/GameFr/src/camera.cpp
+CMakeFiles/GameFr.dir/src/camera.cpp.o: CMakeFiles/GameFr.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/andrei/Projects/GameFr/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/GameFr.dir/src/camera.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GameFr.dir/src/camera.cpp.o -MF CMakeFiles/GameFr.dir/src/camera.cpp.o.d -o CMakeFiles/GameFr.dir/src/camera.cpp.o -c /home/andrei/Projects/GameFr/src/camera.cpp
 
-CMakeFiles/GameFr.dir/src/hey.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/GameFr.dir/src/hey.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/andrei/Projects/GameFr/src/hey.cpp > CMakeFiles/GameFr.dir/src/hey.cpp.i
+CMakeFiles/GameFr.dir/src/camera.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/GameFr.dir/src/camera.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/andrei/Projects/GameFr/src/camera.cpp > CMakeFiles/GameFr.dir/src/camera.cpp.i
 
-CMakeFiles/GameFr.dir/src/hey.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/GameFr.dir/src/hey.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/andrei/Projects/GameFr/src/hey.cpp -o CMakeFiles/GameFr.dir/src/hey.cpp.s
+CMakeFiles/GameFr.dir/src/camera.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/GameFr.dir/src/camera.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/andrei/Projects/GameFr/src/camera.cpp -o CMakeFiles/GameFr.dir/src/camera.cpp.s
 
-CMakeFiles/GameFr.dir/src/main.cpp.o: CMakeFiles/GameFr.dir/flags.make
-CMakeFiles/GameFr.dir/src/main.cpp.o: /home/andrei/Projects/GameFr/src/main.cpp
-CMakeFiles/GameFr.dir/src/main.cpp.o: CMakeFiles/GameFr.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/andrei/Projects/GameFr/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/GameFr.dir/src/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GameFr.dir/src/main.cpp.o -MF CMakeFiles/GameFr.dir/src/main.cpp.o.d -o CMakeFiles/GameFr.dir/src/main.cpp.o -c /home/andrei/Projects/GameFr/src/main.cpp
+CMakeFiles/GameFr.dir/src/entities.cpp.o: CMakeFiles/GameFr.dir/flags.make
+CMakeFiles/GameFr.dir/src/entities.cpp.o: /home/andrei/Projects/GameFr/src/entities.cpp
+CMakeFiles/GameFr.dir/src/entities.cpp.o: CMakeFiles/GameFr.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/andrei/Projects/GameFr/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/GameFr.dir/src/entities.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GameFr.dir/src/entities.cpp.o -MF CMakeFiles/GameFr.dir/src/entities.cpp.o.d -o CMakeFiles/GameFr.dir/src/entities.cpp.o -c /home/andrei/Projects/GameFr/src/entities.cpp
 
-CMakeFiles/GameFr.dir/src/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/GameFr.dir/src/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/andrei/Projects/GameFr/src/main.cpp > CMakeFiles/GameFr.dir/src/main.cpp.i
+CMakeFiles/GameFr.dir/src/entities.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/GameFr.dir/src/entities.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/andrei/Projects/GameFr/src/entities.cpp > CMakeFiles/GameFr.dir/src/entities.cpp.i
 
-CMakeFiles/GameFr.dir/src/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/GameFr.dir/src/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/andrei/Projects/GameFr/src/main.cpp -o CMakeFiles/GameFr.dir/src/main.cpp.s
+CMakeFiles/GameFr.dir/src/entities.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/GameFr.dir/src/entities.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/andrei/Projects/GameFr/src/entities.cpp -o CMakeFiles/GameFr.dir/src/entities.cpp.s
 
 # Object files for target GameFr
 GameFr_OBJECTS = \
-"CMakeFiles/GameFr.dir/src/hey.cpp.o" \
-"CMakeFiles/GameFr.dir/src/main.cpp.o"
+"CMakeFiles/GameFr.dir/src/camera.cpp.o" \
+"CMakeFiles/GameFr.dir/src/entities.cpp.o"
 
 # External object files for target GameFr
 GameFr_EXTERNAL_OBJECTS =
 
-GameFr: CMakeFiles/GameFr.dir/src/hey.cpp.o
-GameFr: CMakeFiles/GameFr.dir/src/main.cpp.o
-GameFr: CMakeFiles/GameFr.dir/build.make
-GameFr: CMakeFiles/GameFr.dir/compiler_depend.ts
-GameFr: CMakeFiles/GameFr.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/andrei/Projects/GameFr/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable GameFr"
+libGameFr.a: CMakeFiles/GameFr.dir/src/camera.cpp.o
+libGameFr.a: CMakeFiles/GameFr.dir/src/entities.cpp.o
+libGameFr.a: CMakeFiles/GameFr.dir/build.make
+libGameFr.a: CMakeFiles/GameFr.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/andrei/Projects/GameFr/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library libGameFr.a"
+	$(CMAKE_COMMAND) -P CMakeFiles/GameFr.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/GameFr.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-CMakeFiles/GameFr.dir/build: GameFr
+CMakeFiles/GameFr.dir/build: libGameFr.a
 .PHONY : CMakeFiles/GameFr.dir/build
 
 CMakeFiles/GameFr.dir/clean:

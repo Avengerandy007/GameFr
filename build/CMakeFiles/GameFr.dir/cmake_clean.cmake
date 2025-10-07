@@ -1,11 +1,10 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/GameFr.dir/link.d"
-  "CMakeFiles/GameFr.dir/src/hey.cpp.o"
-  "CMakeFiles/GameFr.dir/src/hey.cpp.o.d"
-  "CMakeFiles/GameFr.dir/src/main.cpp.o"
-  "CMakeFiles/GameFr.dir/src/main.cpp.o.d"
-  "GameFr"
-  "GameFr.pdb"
+  "CMakeFiles/GameFr.dir/src/camera.cpp.o"
+  "CMakeFiles/GameFr.dir/src/camera.cpp.o.d"
+  "CMakeFiles/GameFr.dir/src/entities.cpp.o"
+  "CMakeFiles/GameFr.dir/src/entities.cpp.o.d"
+  "libGameFr.a"
+  "libGameFr.pdb"
 )
 
 # Per-language clean rules from dependency scanning.

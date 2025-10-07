@@ -8,9 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/andrei/Projects/GameFr/src/hey.cpp" "CMakeFiles/GameFr.dir/src/hey.cpp.o" "gcc" "CMakeFiles/GameFr.dir/src/hey.cpp.o.d"
-  "/home/andrei/Projects/GameFr/src/main.cpp" "CMakeFiles/GameFr.dir/src/main.cpp.o" "gcc" "CMakeFiles/GameFr.dir/src/main.cpp.o.d"
-  "" "GameFr" "gcc" "CMakeFiles/GameFr.dir/link.d"
+  "/home/andrei/Projects/GameFr/src/camera.cpp" "CMakeFiles/GameFr.dir/src/camera.cpp.o" "gcc" "CMakeFiles/GameFr.dir/src/camera.cpp.o.d"
+  "/home/andrei/Projects/GameFr/src/entities.cpp" "CMakeFiles/GameFr.dir/src/entities.cpp.o" "gcc" "CMakeFiles/GameFr.dir/src/entities.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

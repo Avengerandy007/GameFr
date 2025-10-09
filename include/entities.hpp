@@ -27,8 +27,9 @@ protected:
 		W = width;
 		H = height;
 	}
+	Vector2 renderingPostion;
 	bool onScreen;
-	bool IsOnScreen(const Camera2D& camera);
+	void GetRenderingPosition(const Camera2D& camera);
 };
 
 class Entity3D{

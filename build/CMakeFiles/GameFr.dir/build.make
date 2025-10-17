@@ -100,19 +100,35 @@ CMakeFiles/GameFr.dir/src/entities.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/GameFr.dir/src/entities.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/andrei/Projects/GameFr/src/entities.cpp -o CMakeFiles/GameFr.dir/src/entities.cpp.s
 
+CMakeFiles/GameFr.dir/src/util/vectors.cpp.o: CMakeFiles/GameFr.dir/flags.make
+CMakeFiles/GameFr.dir/src/util/vectors.cpp.o: /home/andrei/Projects/GameFr/src/util/vectors.cpp
+CMakeFiles/GameFr.dir/src/util/vectors.cpp.o: CMakeFiles/GameFr.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/andrei/Projects/GameFr/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/GameFr.dir/src/util/vectors.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GameFr.dir/src/util/vectors.cpp.o -MF CMakeFiles/GameFr.dir/src/util/vectors.cpp.o.d -o CMakeFiles/GameFr.dir/src/util/vectors.cpp.o -c /home/andrei/Projects/GameFr/src/util/vectors.cpp
+
+CMakeFiles/GameFr.dir/src/util/vectors.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/GameFr.dir/src/util/vectors.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/andrei/Projects/GameFr/src/util/vectors.cpp > CMakeFiles/GameFr.dir/src/util/vectors.cpp.i
+
+CMakeFiles/GameFr.dir/src/util/vectors.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/GameFr.dir/src/util/vectors.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/andrei/Projects/GameFr/src/util/vectors.cpp -o CMakeFiles/GameFr.dir/src/util/vectors.cpp.s
+
 # Object files for target GameFr
 GameFr_OBJECTS = \
 "CMakeFiles/GameFr.dir/src/camera.cpp.o" \
-"CMakeFiles/GameFr.dir/src/entities.cpp.o"
+"CMakeFiles/GameFr.dir/src/entities.cpp.o" \
+"CMakeFiles/GameFr.dir/src/util/vectors.cpp.o"
 
 # External object files for target GameFr
 GameFr_EXTERNAL_OBJECTS =
 
 libGameFr.a: CMakeFiles/GameFr.dir/src/camera.cpp.o
 libGameFr.a: CMakeFiles/GameFr.dir/src/entities.cpp.o
+libGameFr.a: CMakeFiles/GameFr.dir/src/util/vectors.cpp.o
 libGameFr.a: CMakeFiles/GameFr.dir/build.make
 libGameFr.a: CMakeFiles/GameFr.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/andrei/Projects/GameFr/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library libGameFr.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/andrei/Projects/GameFr/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX static library libGameFr.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/GameFr.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/GameFr.dir/link.txt --verbose=$(VERBOSE)
 

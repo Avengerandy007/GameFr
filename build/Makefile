@@ -184,6 +184,30 @@ src/entities.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameFr.dir/build.make CMakeFiles/GameFr.dir/src/entities.cpp.s
 .PHONY : src/entities.cpp.s
 
+src/util/vectors.o: src/util/vectors.cpp.o
+.PHONY : src/util/vectors.o
+
+# target to build an object file
+src/util/vectors.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameFr.dir/build.make CMakeFiles/GameFr.dir/src/util/vectors.cpp.o
+.PHONY : src/util/vectors.cpp.o
+
+src/util/vectors.i: src/util/vectors.cpp.i
+.PHONY : src/util/vectors.i
+
+# target to preprocess a source file
+src/util/vectors.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameFr.dir/build.make CMakeFiles/GameFr.dir/src/util/vectors.cpp.i
+.PHONY : src/util/vectors.cpp.i
+
+src/util/vectors.s: src/util/vectors.cpp.s
+.PHONY : src/util/vectors.s
+
+# target to generate assembly for a file
+src/util/vectors.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameFr.dir/build.make CMakeFiles/GameFr.dir/src/util/vectors.cpp.s
+.PHONY : src/util/vectors.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -200,6 +224,9 @@ help:
 	@echo "... src/entities.o"
 	@echo "... src/entities.i"
 	@echo "... src/entities.s"
+	@echo "... src/util/vectors.o"
+	@echo "... src/util/vectors.i"
+	@echo "... src/util/vectors.s"
 .PHONY : help
 
 

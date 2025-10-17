@@ -3,6 +3,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/GameFr.dir/src/camera.cpp.o.d"
   "CMakeFiles/GameFr.dir/src/entities.cpp.o"
   "CMakeFiles/GameFr.dir/src/entities.cpp.o.d"
+  "CMakeFiles/GameFr.dir/src/util/vectors.cpp.o"
+  "CMakeFiles/GameFr.dir/src/util/vectors.cpp.o.d"
   "libGameFr.a"
   "libGameFr.pdb"
 )

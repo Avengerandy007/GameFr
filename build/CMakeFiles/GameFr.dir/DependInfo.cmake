@@ -10,6 +10,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/andrei/Projects/GameFr/src/camera.cpp" "CMakeFiles/GameFr.dir/src/camera.cpp.o" "gcc" "CMakeFiles/GameFr.dir/src/camera.cpp.o.d"
   "/home/andrei/Projects/GameFr/src/entities.cpp" "CMakeFiles/GameFr.dir/src/entities.cpp.o" "gcc" "CMakeFiles/GameFr.dir/src/entities.cpp.o.d"
+  "/home/andrei/Projects/GameFr/src/util/vectors.cpp" "CMakeFiles/GameFr.dir/src/util/vectors.cpp.o" "gcc" "CMakeFiles/GameFr.dir/src/util/vectors.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

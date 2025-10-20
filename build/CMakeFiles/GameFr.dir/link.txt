@@ -1,2 +1,0 @@
-/usr/bin/ar qc libGameFr.a CMakeFiles/GameFr.dir/src/camera.cpp.o CMakeFiles/GameFr.dir/src/entities.cpp.o CMakeFiles/GameFr.dir/src/util/vectors.cpp.o
-/usr/bin/ranlib libGameFr.a

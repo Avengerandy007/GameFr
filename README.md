@@ -12,6 +12,8 @@ Is a c++ library designed to deal with the basic, somewhat boring parts of game 
 
 ```bash
 git clone https://github.com/Avengerandy007/GameFr
+cd GameFr
+cmake -S . -B build
 cd GameFr/build
 cmake --build .
 ```

@@ -20,5 +20,6 @@ add_library(GameFr ${GAMEFR_SOURCES})
 
 target_include_directories(GameFr PUBLIC
     ${CMAKE_SOURCE_DIR}/include
+    ${CMAKE_SOURCE_DIR}/include/util
 )
 

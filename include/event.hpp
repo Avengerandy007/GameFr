@@ -1,5 +1,6 @@
 #pragma once
 #include <array>
+#include <cstdint>
 #include <memory>
 #include <vector>
 
@@ -23,17 +24,16 @@ class Entity2D;
 		const Util::EventDataPoint dataPoint;
 	};
 
-	class EventQueue{
-	public:
-		void Send(std::shared_ptr<Entity2D> receiver);
+	struct EventQueue{
 		void CreateEvent(std::weak_ptr<Event> event);
-	private:
 		uint64_t qp; //queue pointer
 		std::vector<std::weak_ptr<Event>> queue;
 	};
 
 	class EventInterface{
-		const EventQueue& queue;
+		EventQueue& queue;
+		uint64_t localQp;
+		uint64_t& qp;
 	public:
 		EventInterface(EventQueue& q);
 		std::weak_ptr<Event> Listen();

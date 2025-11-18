@@ -35,8 +35,8 @@ class Entity2D;
 		uint64_t localQp = 0;
 		uint64_t& qp;
 	public:
-		const EventQueue& queue;
-		EventInterface(const EventQueue& q);
+		EventQueue& queue;
+		EventInterface(EventQueue& q);
 		std::shared_ptr<const Event> Listen(const std::shared_ptr<const Entity2D> parent);
 	};
 

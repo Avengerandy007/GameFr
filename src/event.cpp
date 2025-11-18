@@ -17,3 +17,5 @@ std::shared_ptr<const Gf::Event> Gf::EventInterface::Listen(const std::shared_pt
 	}
 	return nullptr;
 }
+
+Gf::EventInterface::EventInterface(EventQueue &q) : queue(q), qp(q.qp) {}

@@ -41,7 +41,7 @@ namespace GameFr{
 		void GetRenderingPosition(const Camera2D& camera);	/* Gets the position that reflects where this should be rendered
 									 * and also checks if it's visible on the given camera
 									*/
-		const EventInterface eventInterface;
+		EventInterface eventInterface;
 	};
 
 	class Entity3D{

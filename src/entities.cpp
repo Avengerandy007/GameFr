@@ -1,7 +1,9 @@
 #include "entities.hpp"
 #include "camera.hpp"
+#include "event.hpp"
 #include "util/vectors.hpp"
 #include <cstdint>
+#include <memory>
 namespace GameFr{
 	void Entity2D::Push(const Vector2& direction, const float& speed){
 		position.X += direction.X * speed;
@@ -29,10 +31,16 @@ namespace GameFr{
 	    return true;
 	}
 
+	std::shared_ptr<const Entity2D> Entity2D::GetPtr() const{
+		return shared_from_this();
+	}
+
 	bool Entity2D::CollidingCircle(const Entity2D& other, const uint32_t desiredDistance) const{
 		Vector2 pos(position.X + (float)width / 2, position.Y + (float)height / 2);
 		Vector2 otherPos(other.position.X + (float)other.width / 2, other.position.Y + (float)other.height / 2);
-		if (Vector2::GetDistance(pos, other.position) < (float)desiredDistance) return true;
+		if (Vector2::GetDistance(pos, other.position) < (float)desiredDistance){
+			return true;
+		}
 		else return false;
 	}
 

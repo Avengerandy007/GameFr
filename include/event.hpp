@@ -33,11 +33,13 @@ class Entity2D;
 
 	class EventInterface{
 		uint64_t localQp = 0;
-		uint64_t& qp;
+		std::shared_ptr<uint64_t> qp;
 	public:
-		EventQueue& queue;
-		EventInterface(EventQueue& q);
+		std::shared_ptr<EventQueue> queue;
+		EventInterface();
+		EventInterface(const EventInterface& other);
 		std::shared_ptr<const Event> Listen(const std::shared_ptr<const Entity2D> parent);
+		void AssignQueue(const std::shared_ptr<EventQueue> q);
 	};
 
 	enum struct Event::Types{

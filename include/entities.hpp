@@ -15,6 +15,7 @@ namespace GameFr{
 		virtual void Update() = 0;
 
 		std::shared_ptr<const Entity2D> GetPtr() const;
+		Entity2D();
 
 	protected:
 		/*

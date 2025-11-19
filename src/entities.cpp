@@ -5,6 +5,9 @@
 #include <cstdint>
 #include <memory>
 namespace GameFr{
+
+	Entity2D::Entity2D(){}
+
 	void Entity2D::Push(const Vector2& direction, const float& speed){
 		position.X += direction.X * speed;
 		position.Y += direction.Y * speed;

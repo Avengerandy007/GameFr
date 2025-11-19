@@ -12,10 +12,14 @@ void Gf::EventQueue::CreateEvent(std::shared_ptr<const Event> event){
 }
 
 std::shared_ptr<const Gf::Event> Gf::EventInterface::Listen(const std::shared_ptr<const Entity2D> parent){
-	for(; localQp <= qp; localQp++){
-		if (queue.queue[localQp]->receiver == parent) return queue.queue[localQp];
+	for(; localQp <= *qp; localQp++){
+		if (queue->queue[localQp]->receiver == parent) return queue->queue[localQp];
 	}
 	return nullptr;
 }
 
-Gf::EventInterface::EventInterface(EventQueue &q) : queue(q), qp(q.qp) {}
+Gf::EventInterface::EventInterface(const EventInterface& other) : queue(other.queue), qp(other.qp), localQp(other.localQp) {}
+Gf::EventInterface::EventInterface(){}
+void Gf::EventInterface::AssignQueue(const std::shared_ptr<EventQueue> q){
+	queue = q;
+}

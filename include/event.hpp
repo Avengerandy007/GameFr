@@ -1,18 +1,19 @@
 #pragma once
 #include <array>
 #include <cstdint>
+#include "util/vectors.hpp"
 #include <memory>
 #include <vector>
 
 namespace GameFr{
-class Vector2;
 class Entity2D;
 
 	namespace Util{
 		struct EventDataPoint{
-			const std::shared_ptr<Vector2> position;
+			const Vector2 position;
 			const std::array<int, 10> additionalData;
 			EventDataPoint(const EventDataPoint& dataPoint);
+			EventDataPoint(const Vector2& pos, const std::array<int, 10>& additionalData);
 		};
 	}
 

@@ -24,7 +24,10 @@ std::shared_ptr<const Gf::Event> Gf::EventInterface::Listen(const std::shared_pt
 	try {
 		if (!queue) throw -1;
 		for(; localQp < queue->qp; localQp++){
-			if (queue->queue[localQp]->receiver == parent) return queue->queue[localQp];
+			if (queue->queue[localQp]->receiver == parent) {
+				localQp++;
+				return queue->queue[localQp - 1];
+			}
 		}
 	}
 	catch(int e){

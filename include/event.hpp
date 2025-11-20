@@ -34,7 +34,6 @@ class Entity2D;
 
 	class EventInterface{
 		uint64_t localQp = 0;
-		std::shared_ptr<uint64_t> qp;
 	public:
 		std::shared_ptr<EventQueue> queue;
 		EventInterface();

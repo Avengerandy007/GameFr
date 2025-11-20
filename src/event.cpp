@@ -1,4 +1,5 @@
 #include "event.hpp"
+#include <iostream>
 
 namespace Gf = GameFr;
 
@@ -14,8 +15,14 @@ void Gf::EventQueue::CreateEvent(std::shared_ptr<const Event> event){
 }
 
 std::shared_ptr<const Gf::Event> Gf::EventInterface::Listen(const std::shared_ptr<const Entity2D> parent){
-	for(; localQp <= *qp; localQp++){
-		if (queue->queue[localQp]->receiver == parent) return queue->queue[localQp];
+	try {
+		if (!qp) throw -1;
+		for(; localQp <= *qp; localQp++){
+			if (queue->queue[localQp]->receiver == parent) return queue->queue[localQp];
+		}
+	}
+	catch(int e){
+		std::cout << "qp == nullptr in Listen()\n";
 	}
 	return nullptr;
 }

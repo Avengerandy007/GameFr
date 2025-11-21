@@ -12,7 +12,6 @@ Gf::Event::Event(const Types t, const std::shared_ptr<const Entity2D> s, const s
 void Gf::EventQueue::CreateEvent(std::shared_ptr<const Event> event){
 	try{
 		if (!event) throw -1;
-		qp++;
 		queue.push_back(event);
 	}
 	catch(int e){
@@ -23,10 +22,10 @@ void Gf::EventQueue::CreateEvent(std::shared_ptr<const Event> event){
 std::shared_ptr<const Gf::Event> Gf::EventInterface::Listen(const std::shared_ptr<const Entity2D> parent){
 	try {
 		if (!queue) throw -1;
-		for(; localQp < queue->qp; localQp++){
-			if (queue->queue[localQp]->receiver == parent) {
-				localQp++;
-				return queue->queue[localQp - 1];
+		for(; qp < queue->queue.size(); qp++){
+			if (queue->queue[qp]->receiver == parent) {
+				qp++;
+				return queue->queue[qp - 1];
 			}
 		}
 	}
@@ -36,7 +35,7 @@ std::shared_ptr<const Gf::Event> Gf::EventInterface::Listen(const std::shared_pt
 	return nullptr;
 }
 
-Gf::EventInterface::EventInterface(const EventInterface& other) : queue(other.queue), localQp(other.localQp) {}
+Gf::EventInterface::EventInterface(const EventInterface& other) : queue(other.queue), qp(other.qp) {}
 Gf::EventInterface::EventInterface(){}
 void Gf::EventInterface::AssignQueue(const std::shared_ptr<EventQueue> q) {
 	queue = q;

@@ -35,6 +35,23 @@ std::shared_ptr<const Gf::Event> Gf::EventInterface::Listen(const std::shared_pt
 	return nullptr;
 }
 
+std::shared_ptr<const Gf::Event> Gf::EventInterface::Listen(const Gf::Event::Types desiredType){
+	try {
+		if (!queue) throw -1;
+		for(; qp < queue->queue.size(); qp++){
+			if (queue->queue[qp]->type == desiredType) {
+				qp++;
+				return queue->queue[qp - 1];
+			}
+		}
+	}
+	catch(int e){
+		std::cout << "queue == nullptr in Listen()\n";
+	}
+	return nullptr;
+
+}
+
 Gf::EventInterface::EventInterface(const EventInterface& other) : queue(other.queue), qp(other.qp) {}
 Gf::EventInterface::EventInterface(){}
 void Gf::EventInterface::AssignQueue(const std::shared_ptr<EventQueue> q) {

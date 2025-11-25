@@ -1,5 +1,5 @@
 #include "util/vectors.hpp"
-#include <cmath>
+#include <math.h>
 namespace GameFr{
 	Vector2::Vector2(){
 		X = 0;
@@ -22,5 +22,11 @@ namespace GameFr{
 		Vector2 diff = GetDiference(first, second);
 		float result = sqrt(pow(diff.X, 2) + pow(diff.Y, 2));
 		return result;
+	}
+
+	void Vector2::Normalize(){
+		float magnitude = std::sqrt(X * X + Y * Y);
+		X /= magnitude;
+		Y /= magnitude;
 	}
 }

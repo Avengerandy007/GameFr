@@ -5,6 +5,10 @@ namespace GameFr{
 		gen.seed(rd());
 		distrib = std::uniform_int_distribution(min, max);
 	}
+	Randomizer::Randomizer(const Randomizer& other){
+		gen = other.gen;
+		distrib = other.distrib;
+	}
 	void Randomizer::ChangeRange(int min, int max){
 		distrib = std::uniform_int_distribution(min, max);
 	}

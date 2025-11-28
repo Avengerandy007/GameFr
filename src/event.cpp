@@ -9,7 +9,7 @@ Gf::Util::EventDataPoint::EventDataPoint(const Vector2& pos, const std::array<in
 
 Gf::Event::Event(const Types t, const std::shared_ptr<const Entity2D> s, const std::shared_ptr<const Entity2D> r, const Util::EventDataPoint d) : type(t), sender(s), receiver(r), dataPoint(d){}
 
-void Gf::EventQueue::CreateEvent(std::shared_ptr<const Event> event){
+void Gf::EventQueue::CreateEvent(const std::shared_ptr<const Event>& event){
 	try{
 		if (!event) throw -1;
 		queue.push_back(event);

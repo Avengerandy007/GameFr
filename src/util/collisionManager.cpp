@@ -36,6 +36,7 @@ GameFr::Util::CollisionManager::CollisionManager(const bool useAABBCollision, co
 	useAABB = useAABBCollision;
 	eventInterface.AssignQueue(eventQueue);
 	entities = list;
+	iterations = entities.size() * (entities.size() - 1) / 2;
 }
 
 template<int n>
@@ -43,6 +44,7 @@ GameFr::Util::CollisionManager::CollisionManager(const bool useAABBCollision, co
 	useAABB = useAABBCollision;
 	eventInterface.AssignQueue(eventQueue);
 	entities = list;
+	iterations = entities.size() * (entities.size() - 1) / 2;
 }
 
 void GameFr::Util::CollisionManager::Update(){

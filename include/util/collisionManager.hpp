@@ -1,20 +1,28 @@
 #include "event.hpp"
 #include "entities.hpp"
+#include <cstdint>
 #include <memory>
 #include <vector>
 
 namespace GameFr::Util{
 	class CollisionManager{
 	public:
-		void Update();
-		void AddEntities(const std::vector<std::shared_ptr<Entity2D>> additions);
+		virtual void Update();
+		void AddEntities(const std::vector<std::shared_ptr<Entity2D>>& additions);
+		void AddEntities(const std::shared_ptr<Entity2D>& addition);
 		template<int n>
-		void AddEntities(const std::array<std::shared_ptr<Entity2D>, n> additions);
-		void SetCOllisionMode(bool useAABBCollision);
-		CollisionManager(bool useAABBCollision);
+		void AddEntities(const std::array<std::shared_ptr<Entity2D>, n>& additions);
+		void SetCollisionMode(const bool useAABBCollision);
+		CollisionManager(const bool useAABBCollision, const std::shared_ptr<EventQueue> eventQueue, const std::vector<std::shared_ptr<Entity2D>>& list);
+		CollisionManager(const bool useAABBCollision, const std::shared_ptr<EventQueue> eventQueue, const std::shared_ptr<Entity2D>& addition);
+
+		template<int n>
+		CollisionManager(const bool useAABBCollision, const std::shared_ptr<EventQueue> eventQueue, const std::array<std::shared_ptr<Entity2D>, n>& list);
 	private:
+		EventInterface eventInterface;
 		bool useAABB;
 		std::vector<std::shared_ptr<Entity2D>> entities;
-		bool CheckCollision(const std::shared_ptr<Entity2D> first, const std::shared_ptr<Entity2D> second);
+		uint32_t iterations;
+		virtual bool CheckCollision(const std::shared_ptr<Entity2D>& first, const std::shared_ptr<Entity2D>& second);
 	};
 }

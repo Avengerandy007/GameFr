@@ -14,7 +14,6 @@ namespace GameFr::Util{
 		void AddEntities(const std::array<std::shared_ptr<Entity2D>, n>& additions);
 		void SetCollisionMode(const bool useAABBCollision);
 		CollisionManager(const bool useAABBCollision, const std::shared_ptr<EventQueue> eventQueue, const std::vector<std::shared_ptr<Entity2D>>& list);
-		CollisionManager(const bool useAABBCollision, const std::shared_ptr<EventQueue> eventQueue, const std::shared_ptr<Entity2D>& addition);
 
 		template<int n>
 		CollisionManager(const bool useAABBCollision, const std::shared_ptr<EventQueue> eventQueue, const std::array<std::shared_ptr<Entity2D>, n>& list);

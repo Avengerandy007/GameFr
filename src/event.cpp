@@ -12,11 +12,11 @@ Gf::Event::Event(const Types t, const std::shared_ptr<const Entity2D> s, const s
 void Gf::EventQueue::CreateEvent(const std::shared_ptr<const Event>& event){
 	try{
 		if (!event) throw -1;
+		queue[qp] = event;
+		qp++;
 		if (qp >= 10000){
 			qp = 0;
 		}
-		queue[qp] = event;
-		qp++;
 	}
 	catch(int e){
 		std::cerr << "Event ptr in nullptr\n";
@@ -26,9 +26,6 @@ void Gf::EventQueue::CreateEvent(const std::shared_ptr<const Event>& event){
 std::shared_ptr<const Gf::Event> Gf::EventInterface::Listen(const std::shared_ptr<const Entity2D> parent){
 	try {
 		if (!queue) throw -1;
-		if (qp >= 9999){
-			qp = 0;
-		}
 		uint64_t limit = (qp <= queue->qp) ? queue->qp : 10000;
 		for(; qp < limit; qp++){
 			if (qp >= 9999 && queue->qp <= 9999){
@@ -58,9 +55,6 @@ std::shared_ptr<const Gf::Event> Gf::EventInterface::Listen(const std::shared_pt
 std::shared_ptr<const Gf::Event> Gf::EventInterface::Listen(const Gf::Event::Types desiredType){
 	try {
 		if (!queue) throw -1;
-		if (qp >= 9999){
-			qp = 0;
-		}
 		uint64_t limit = (qp <= queue->qp) ? queue->qp : 10000;
 		for(; qp < limit ; qp++){
 			if (qp >= 9999 && queue->qp <= 9999){

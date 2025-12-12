@@ -1,5 +1,5 @@
 #include "event.hpp"
-#include <iostream>
+#include <assert.h>
 
 namespace Gf = GameFr;
 
@@ -10,73 +10,51 @@ Gf::Util::EventDataPoint::EventDataPoint(const Vector2& pos, const std::array<in
 Gf::Event::Event(const Types t, const std::shared_ptr<const Entity2D> s, const std::shared_ptr<const Entity2D> r, const Util::EventDataPoint d) : type(t), sender(s), receiver(r), dataPoint(d){}
 
 void Gf::EventQueue::CreateEvent(const std::shared_ptr<const Event>& event){
-	try{
-		if (!event) throw -1;
-		queue[qp] = event;
-		qp++;
-		if (qp >= 10000){
-			qp = 0;
-		}
+	assert(event);
+	if (qp >= 10000){
+		qp = 0;
 	}
-	catch(int e){
-		std::cerr << "Event ptr in nullptr\n";
-	}
+	if (!event) throw -1;
+	queue[qp] = event;
+	qp++;
+		
 }
 
 std::shared_ptr<const Gf::Event> Gf::EventInterface::Listen(const std::shared_ptr<const Entity2D> parent){
-	try {
-		if (!queue) throw -1;
-		uint64_t limit = (qp <= queue->qp) ? queue->qp : 10000;
-		for(; qp < limit; qp++){
-			if (qp >= 9999 && queue->qp <= 9999){
-				limit = queue->qp;
-				qp = 0;
-			}
-			if (!queue->queue[qp]) break;
-			if (queue->queue[qp]->receiver == parent) {
-				qp++;
-				return queue->queue[qp - 1];
-			}
+	assert(queue);
+	qp = (qp < 9999) ? qp : 0;
+	assert(qp <= 9999);
+	uint32_t limit = (qp <= queue->qp) ? queue->qp : 10000;
+	for(; qp < limit ; qp++){
+		if (qp > 9999 && queue->qp < 9999){
+			limit = queue->qp;
+			qp = 0;
 		}
-	}
-	catch(int e){
-		switch(e){
-			case -1:
-				std::cerr << "queue == nullptr in Listen()\n";
-				break;
-			case -2:
-				std::cerr << "local qp was larger than queue\n";
-				break;
+		if (!queue->queue[qp]) break;
+		if (queue->queue[qp]->receiver == parent) {
+			qp++;
+			return queue->queue[qp - 1];
 		}
 	}
 	return nullptr;
 }
 
 std::shared_ptr<const Gf::Event> Gf::EventInterface::Listen(const Gf::Event::Types desiredType){
-	try {
-		if (!queue) throw -1;
-		uint64_t limit = (qp <= queue->qp) ? queue->qp : 10000;
-		for(; qp < limit ; qp++){
-			if (qp >= 9999 && queue->qp <= 9999){
-				limit = queue->qp;
-				qp = 0;
-			}
-			if (!queue->queue[qp]) break;
-			if (queue->queue[qp]->type == desiredType) {
-				qp++;
-				return queue->queue[qp - 1];
-			}
+	assert(queue);
+	qp = (qp < 9999) ? qp : 0;
+	assert(qp <= 9999);
+	uint32_t limit = (qp <= queue->qp) ? queue->qp : 10000;
+	for(; qp < limit ; qp++){
+		if (qp > 9999 && queue->qp < 9999){
+			limit = queue->qp;
+			qp = 0;
+		}
+		if (!queue->queue[qp]) break;
+		if (queue->queue[qp]->type == desiredType) {
+			qp++;
+			return queue->queue[qp - 1];
 		}
 	}
-	catch(int e){
-		switch(e){
-			case -1:
-				std::cerr << "queue == nullptr in Listen()\n";
-				break;
-			case -2:
-				std::cerr << "local qp was larger than queue\n";
-				break;
-		}	}
 	return nullptr;
 
 }

@@ -11,6 +11,12 @@ namespace GameFr{
 		Y = y;
 	}
 
+	bool operator==(const Vector2& l, const Vector2& r){
+		if (l.X != r.X) return false;
+		if (l.Y != r.Y) return false;
+		return true;
+	}
+
 	Vector2 Vector2::GetDiference(const Vector2 &first, const Vector2 &second){
 		Vector2 result;
 		result.X = first.X - second.X;

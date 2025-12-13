@@ -24,7 +24,7 @@ std::shared_ptr<const Gf::Event> Gf::EventInterface::Listen(const std::shared_pt
 	assert(queue);
 	qp = (qp < 9999) ? qp : 0;
 	assert(qp <= 9999);
-	uint32_t limit = (qp <= queue->qp) ? queue->qp : 10000;
+	uint32_t limit = (qp <= queue->qp && queue->qp < 10000) ? queue->qp : 10000;
 	for(; qp < limit ; qp++){
 		if (qp > 9999 && queue->qp < 9999){
 			limit = queue->qp;
@@ -43,7 +43,7 @@ std::shared_ptr<const Gf::Event> Gf::EventInterface::Listen(const Gf::Event::Typ
 	assert(queue);
 	qp = (qp < 9999) ? qp : 0;
 	assert(qp <= 9999);
-	uint32_t limit = (qp <= queue->qp) ? queue->qp : 10000;
+	uint32_t limit = (qp <= queue->qp && queue->qp < 10000) ? queue->qp : 10000;
 	for(; qp < limit ; qp++){
 		if (qp > 9999 && queue->qp < 9999){
 			limit = queue->qp;

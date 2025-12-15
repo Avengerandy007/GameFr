@@ -48,12 +48,12 @@ namespace GameFr{
 	}
 
 	void Entity2D::GetRenderingPosition(const Camera2D& camera){
-		renderingPostion = Vector2(position.X - camera.position.X, position.Y - camera.position.Y);
-		if (renderingPostion.X + width < 0 || renderingPostion.Y + height < 0){
+		renderingPosition = Vector2(position.X - camera.position.X, position.Y - camera.position.Y);
+		if (renderingPosition.X + width < 0 || renderingPosition.Y + height < 0){
 			onScreen = false;
 			return;
 		}
-		if (renderingPostion.X > camera.resolutionX || renderingPostion.Y > camera.resolutionY){
+		if (renderingPosition.X > camera.resolutionX || renderingPosition.Y > camera.resolutionY){
 			onScreen = false;
 			return;
 		}

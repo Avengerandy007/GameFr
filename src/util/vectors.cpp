@@ -30,8 +30,16 @@ namespace GameFr{
 		return result;
 	}
 
+	float Vector2::DotProduct(const Vector2 &first, const Vector2 &second){
+		return (first.X * second.X) + (first.Y * second.Y);
+	}
+
+	float Vector2::Magnitude(){
+		return std::sqrt(X * X + Y * Y);
+	}
+
 	void Vector2::Normalize(){
-		float magnitude = std::sqrt(X * X + Y * Y);
+		float magnitude = Magnitude();
 		X /= magnitude;
 		Y /= magnitude;
 	}

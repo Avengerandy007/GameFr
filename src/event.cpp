@@ -14,7 +14,6 @@ void Gf::EventQueue::CreateEvent(const std::shared_ptr<const Event>& event){
 	if (qp >= 10000){
 		qp = 0;
 	}
-	if (!event) throw -1;
 	queue[qp] = event;
 	qp++;
 		
@@ -23,7 +22,6 @@ void Gf::EventQueue::CreateEvent(const std::shared_ptr<const Event>& event){
 std::shared_ptr<const Gf::Event> Gf::EventInterface::Listen(const std::shared_ptr<const Entity2D> parent){
 	assert(queue);
 	qp = (qp < 9999) ? qp : 0;
-	assert(qp <= 9999);
 	uint32_t limit = (qp <= queue->qp && queue->qp < 10000) ? queue->qp : 10000;
 	for(; qp < limit ; qp++){
 		if (qp > 9999 && queue->qp < 9999){
@@ -42,7 +40,6 @@ std::shared_ptr<const Gf::Event> Gf::EventInterface::Listen(const std::shared_pt
 std::shared_ptr<const Gf::Event> Gf::EventInterface::Listen(const Gf::Event::Types desiredType){
 	assert(queue);
 	qp = (qp < 9999) ? qp : 0;
-	assert(qp <= 9999);
 	uint32_t limit = (qp <= queue->qp && queue->qp < 10000) ? queue->qp : 10000;
 	for(; qp < limit ; qp++){
 		if (qp > 9999 && queue->qp < 9999){

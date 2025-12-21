@@ -10,6 +10,8 @@ namespace GameFr{
 		friend bool operator==(const Vector2& l, const Vector2& r);
 		friend Vector2 operator+(const Vector2& a, const float& b);
 		friend Vector2 operator+(const Vector2& a, const Vector2& b);
+		friend Vector2 operator-(const Vector2& a, const float& b);
+		friend Vector2 operator-(const Vector2& a, const Vector2& b);
 		friend Vector2 operator*(const Vector2& a, const float& b);
 		friend Vector2 operator/(const Vector2& a, const float& b);
 

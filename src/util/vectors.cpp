@@ -25,6 +25,14 @@ namespace GameFr{
 		return Vector2(a.X + b.X, a.Y + b.Y);
 	}
 
+	Vector2 operator-(const Vector2& a, const float& b){
+		return Vector2(a.X - b, a.Y - b);
+	}
+
+	Vector2 operator-(const Vector2& a, const Vector2& b){
+		return Vector2(a.X - b.X, a.Y - b.Y);
+	}
+
 	Vector2 operator*(const Vector2& a, const float& b){
 		return Vector2(a.X * b, a.Y * b);
 	}

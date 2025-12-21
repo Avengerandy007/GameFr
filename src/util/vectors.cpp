@@ -17,6 +17,22 @@ namespace GameFr{
 		return true;
 	}
 
+	Vector2 operator+(const Vector2& a, const float& b){
+		return Vector2(a.X + b, a.Y + b);
+	}
+
+	Vector2 operator+(const Vector2& a, const Vector2& b){
+		return Vector2(a.X + b.X, a.Y + b.Y);
+	}
+
+	Vector2 operator*(const Vector2& a, const float& b){
+		return Vector2(a.X * b, a.Y * b);
+	}
+	
+	Vector2 operator/(const Vector2& a, const float& b){
+		return Vector2(a.X / b, a.Y / b);
+	}
+
 	Vector2 Vector2::GetDiference(const Vector2 &first, const Vector2 &second){
 		Vector2 result;
 		result.X = first.X - second.X;

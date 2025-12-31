@@ -1,5 +1,5 @@
 #include "event.hpp"
-#include <assert.h>
+#include <iostream>
 
 namespace Gf = GameFr;
 
@@ -10,47 +10,34 @@ Gf::Util::EventDataPoint::EventDataPoint(const Vector2& pos, const std::array<in
 Gf::Event::Event(const Types t, const std::shared_ptr<const Entity2D> s, const std::shared_ptr<const Entity2D> r, const Util::EventDataPoint d) : type(t), sender(s), receiver(r), dataPoint(d){}
 
 void Gf::EventQueue::CreateEvent(const std::shared_ptr<const Event>& event){
-	assert(event);
-	if (qp > 9999){
-		qp = 0;
-	}
-	queue[qp] = event;
-	qp++;
-		
+	queue[qp.Value()] = event;
+	++qp;
 }
 
 std::shared_ptr<const Gf::Event> Gf::EventInterface::Listen(const std::shared_ptr<const Entity2D> parent){
-	assert(queue);
-	qp = (qp < 10000) ? qp : 0;
-	uint32_t limit = (qp <= queue->qp) ? queue->qp : 10000;
-	for(; qp < limit ; qp++){
-		if (!queue->queue[qp]) break;
-		if (queue->queue[qp]->receiver == parent) {
-			qp++;
-			return queue->queue[qp - 1];
+	uint32_t limit = (qp.Value() <= queue->qp.Value()) ? queue->qp.Value() : 10000;
+	for(; qp.Value() < limit ; ++qp){
+		std::clog << "Qp: " << (int)qp.Value() << "\n";
+		if (!queue->queue[qp.Value()]) break;
+		if (queue->queue[qp.Value()]->receiver == parent) {
+			++qp;
+			return queue->queue[qp.Subtract(1)];
 		}
-		if (qp >= 9999){
-			limit = (queue->qp != 0) ? queue->qp : limit;
-			qp = 0;
-		}
+		limit = (queue->qp.Value() != 0 && qp.Value() >= queue->queue.size() - 1) ? queue->qp.Value() : limit;
 	}
 	return nullptr;
 }
 
 std::shared_ptr<const Gf::Event> Gf::EventInterface::Listen(const Gf::Event::Types desiredType){
-	assert(queue);
-	qp = (qp < 10000) ? qp : 0;
-	uint32_t limit = (qp <= queue->qp) ? queue->qp : 10000;
-	for(; qp < limit ; qp++){
-		if (!queue->queue[qp]) break;
-		if (queue->queue[qp]->type == desiredType){
-			qp++;
-			return queue->queue[qp - 1];
+	uint32_t limit = (qp.Value() <= queue->qp.Value()) ? queue->qp.Value() : 10000;
+	for(; qp.Value() < limit ; ++qp){
+		std::clog << "Qp: " << (int)qp.Value() << "\n";
+		if (!queue->queue[qp.Value()]) break;
+		if (queue->queue[qp.Value()]->type == desiredType){
+			++qp;
+			return queue->queue[qp.Subtract(1)];
 		}
-		if (qp >= 9999){
-			limit = (queue->qp != 0) ? queue->qp : limit;
-			qp = 0;
-		}
+		limit = (queue->qp.Value() != 0 && qp.Value() >= queue->queue.size() - 1) ? queue->qp.Value() : limit;
 	}
 	return nullptr;
 

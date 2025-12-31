@@ -3,6 +3,7 @@
 #include <cstdint>
 #include "util/vectors.hpp"
 #include <memory>
+#include "util/SmartCounter.hpp"
 
 namespace GameFr{
 class Entity2D;
@@ -28,13 +29,13 @@ class Entity2D;
 	struct EventQueue{
 		std::array<std::shared_ptr<const Event>, 10000> queue;
 		void CreateEvent(const std::shared_ptr<const Event>& event); //append an event object ptr at qp in queue
-		uint64_t qp = 0; //position of newest addition to the queue (where EventInterface::Listen should stop)
+		Util::SmartCounter<uint16_t, 0, 9999, 1> qp;
 	};
 
 	//Object to interface to queue
 	class EventInterface{
 		//queue ptr (where should it start iterating from on Listen)
-		uint64_t qp = 0;
+		Util::SmartCounter<uint16_t, 0, 9999, 1> qp;
 	public:
 		std::shared_ptr<EventQueue> queue;	//ptr to assigned queue
 		EventInterface();

@@ -1,5 +1,4 @@
 #include "event.hpp"
-#include <iostream>
 
 namespace Gf = GameFr;
 
@@ -17,7 +16,6 @@ void Gf::EventQueue::CreateEvent(const std::shared_ptr<const Event>& event){
 std::shared_ptr<const Gf::Event> Gf::EventInterface::Listen(const std::shared_ptr<const Entity2D> parent){
 	uint32_t limit = (qp.Value() <= queue->qp.Value()) ? queue->qp.Value() : 10000;
 	for(; qp.Value() < limit ; ++qp){
-		std::clog << "Qp: " << (int)qp.Value() << "\n";
 		if (!queue->queue[qp.Value()]) break;
 		if (queue->queue[qp.Value()]->receiver == parent) {
 			++qp;
@@ -31,7 +29,6 @@ std::shared_ptr<const Gf::Event> Gf::EventInterface::Listen(const std::shared_pt
 std::shared_ptr<const Gf::Event> Gf::EventInterface::Listen(const Gf::Event::Types desiredType){
 	uint32_t limit = (qp.Value() <= queue->qp.Value()) ? queue->qp.Value() : 10000;
 	for(; qp.Value() < limit ; ++qp){
-		std::clog << "Qp: " << (int)qp.Value() << "\n";
 		if (!queue->queue[qp.Value()]) break;
 		if (queue->queue[qp.Value()]->type == desiredType){
 			++qp;
@@ -40,7 +37,6 @@ std::shared_ptr<const Gf::Event> Gf::EventInterface::Listen(const Gf::Event::Typ
 		limit = (queue->qp.Value() != 0 && qp.Value() >= queue->queue.size() - 1) ? queue->qp.Value() : limit;
 	}
 	return nullptr;
-
 }
 
 Gf::EventInterface::EventInterface(const EventInterface& other) : queue(other.queue), qp(other.qp) {}

@@ -58,7 +58,7 @@ namespace GameFr{
 		return (first.X * second.X) + (first.Y * second.Y);
 	}
 
-	float Vector2::Magnitude(){
+	float Vector2::Magnitude() const{
 		return std::sqrt(X * X + Y * Y);
 	}
 
